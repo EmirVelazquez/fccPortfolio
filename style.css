@@ -15,5 +15,11 @@ body {
   background-color: teal;
   color: whitesmoke;
 }
+body .main #welcome-section {
+  background-color: palegoldenrod;
+  color: darkslategrey;
+  padding: 100px;
+  height: 100vh;
+}
 
 /*# sourceMappingURL=style.css.map */

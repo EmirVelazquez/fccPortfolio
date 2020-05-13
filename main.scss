@@ -17,4 +17,12 @@ body {
 body {
     background-color: $mainColor;
     color: $mainText;
+    .main {
+        #welcome-section {
+            background-color: palegoldenrod;
+            color: darkslategrey;
+            padding: 100px;
+            height: 100vh;
+        }
+    }
 }
