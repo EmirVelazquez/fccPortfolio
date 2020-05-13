@@ -3,15 +3,16 @@ $mainText: whitesmoke;
 
 * {
     box-sizing: border-box;
-    &:before, &:after{
+    &:before,
+    &:after {
         box-sizing: border-box;
     }
 }
 
 html,
 body {
- height: 100%;
- position: relative;
+    height: 100%;
+    position: relative;
 }
 
 body {
@@ -23,6 +24,39 @@ body {
             color: darkslategrey;
             padding: 100px;
             height: 100vh;
+        }
+        footer {
+            background-color: lightcoral;
+            width: 100%;
+            height: 150px;
+            #socialIcons {
+                // position: absolute;
+                // bottom: 50px;
+                display: flex;
+                .socialWrapper {
+                    display: block;
+                    margin: 0 10px 0 0;
+                    border: 2px solid whitesmoke;
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    padding: 5px;
+                    &:hover {
+                        border: 2px solid lightgreen;
+                        .socialSvg {
+                            fill: lightgreen !important;
+                        }
+                    }
+                    .socialSvg {
+                        fill: whitesmoke !important;
+                    }
+                }
+            }
+            #copyrightContainer {
+                // position: absolute;
+                // bottom: 0;
+                font-size: 14px;
+            }
         }
     }
 }

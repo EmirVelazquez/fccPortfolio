@@ -21,5 +21,34 @@ body .main #welcome-section {
   padding: 100px;
   height: 100vh;
 }
+body .main footer {
+  background-color: lightcoral;
+  width: 100%;
+  height: 150px;
+}
+body .main footer #socialIcons {
+  display: flex;
+}
+body .main footer #socialIcons .socialWrapper {
+  display: block;
+  margin: 0 10px 0 0;
+  border: 2px solid whitesmoke;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+}
+body .main footer #socialIcons .socialWrapper:hover {
+  border: 2px solid lightgreen;
+}
+body .main footer #socialIcons .socialWrapper:hover .socialSvg {
+  fill: lightgreen !important;
+}
+body .main footer #socialIcons .socialWrapper .socialSvg {
+  fill: whitesmoke !important;
+}
+body .main footer #copyrightContainer {
+  font-size: 14px;
+}
 
 /*# sourceMappingURL=style.css.map */
