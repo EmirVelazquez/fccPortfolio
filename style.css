@@ -36,7 +36,7 @@ body .main footer #socialIcons .socialWrapper {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  padding: 5px;
+  padding: 3px;
 }
 body .main footer #socialIcons .socialWrapper:hover {
   border: 2px solid lightgreen;
