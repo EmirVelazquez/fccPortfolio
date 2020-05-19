@@ -15,6 +15,9 @@ body {
   background-color: #2f323a;
   color: whitesmoke;
 }
+body #navbar {
+  background-color: #33658a;
+}
 body .main #welcome-section {
   background-color: palegoldenrod;
   color: darkslategrey;
@@ -49,6 +52,11 @@ body .main footer #socialIcons .socialWrapper .socialSvg {
 }
 body .main footer #copyrightContainer {
   font-size: 14px;
+}
+
+.updateNav {
+  background-color: #f26419 !important;
+  height: 15vh;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -22,6 +22,9 @@ body {
 body {
     background-color: $mainColor;
     color: $mainText;
+    #navbar {
+        background-color: $secondColor;
+    }
     .main {
         #welcome-section {
             background-color: palegoldenrod;
@@ -63,4 +66,9 @@ body {
             }
         }
     }
+}
+
+.updateNav {
+    background-color: $fourthColor !important;
+    height: 15vh;
 }
