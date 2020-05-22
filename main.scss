@@ -20,17 +20,20 @@ body {
 }
 
 body {
-    background-color: $mainColor;
-    color: $mainText;
+    background-color: #ffffff;
+    color: $mainColor;
     #navbar {
         background-color: $secondColor;
     }
     .main {
         #welcome-section {
-            background-color: palegoldenrod;
-            color: darkslategrey;
+            background-color: #ffffff;
+            color: $mainColor;
             padding: 100px;
             height: 100vh;
+            .textHighlight {
+                color: $fourthColor;
+            }
         }
         footer {
             background-color: lightcoral;

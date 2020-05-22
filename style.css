@@ -12,17 +12,20 @@ body {
 }
 
 body {
-  background-color: #2f323a;
-  color: whitesmoke;
+  background-color: #ffffff;
+  color: #2f323a;
 }
 body #navbar {
   background-color: #33658a;
 }
 body .main #welcome-section {
-  background-color: palegoldenrod;
-  color: darkslategrey;
+  background-color: #ffffff;
+  color: #2f323a;
   padding: 100px;
   height: 100vh;
+}
+body .main #welcome-section .textHighlight {
+  color: #f26419;
 }
 body .main footer {
   background-color: lightcoral;
