@@ -27,4 +27,61 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     };
+
+    // ==================================================
+    // Zdog Demo
+    // ==================================================
+
+    // Rotating flag variable
+    let isSpinning = true;
+
+    // create illo
+    let illo = new Zdog.Illustration({
+        // set canvas with selector
+        element: ".zdog-canvas",
+        // zoom up 4x
+        zoom: 1.5,
+        // enable rotating scene with dragging
+        dragRotate: true,
+        // stop rotation when dragging starts
+        onDragStart: function () {
+            isSpinning = false;
+        }
+    });
+
+    // add circle
+    new Zdog.Ellipse({
+        addTo: illo,
+        diameter: 80,
+        stroke: 20,
+        color: "#636"
+    });
+
+    // square
+    new Zdog.Rect({
+        addTo: illo,
+        width: 80,
+        height: 80,
+        // position further back
+        translate: { z: -40 },
+        stroke: 12,
+        color: '#E62',
+        fill: true,
+    });
+
+    // update & render
+    illo.updateRenderGraph();
+
+    // Animating
+    function animate() {
+        // rotate illo each frame
+        if (isSpinning) {
+            illo.rotate.y += 0.03;
+        }
+        illo.updateRenderGraph();
+        // animate next frame
+        requestAnimationFrame(animate);
+    }
+    // start animation
+    animate();
 })
