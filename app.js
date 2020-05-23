@@ -33,9 +33,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // ==================================================
 
     // create illustration
-    let illo = new Zdog.Illustration({
+    let welcomeCanvas = new Zdog.Illustration({
         // set canvas with selector
-        element: ".zdog-canvas",
+        element: ".welcomeCanvas",
         resize: "fullscreen",
         // zoom number for element
         zoom: 1,
@@ -46,49 +46,31 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    let mainBody = new Zdog.Cylinder({
-        addTo: illo,
-        diameter: 30,
-        length: 120,
+    let topHemi = new Zdog.Hemisphere({
+        addTo: welcomeCanvas,
+        diameter: 20,
         stroke: false,
         color: '#C25',
         backface: '#E62',
-        rotate: { x: Zdog.TAU / 5 }
+        translate: { x: 1 },
+        // rotate: { x: Zdog.TAU / 4 }
     });
 
-    let rocketTop = new Zdog.Cone({
-        addTo: illo,
-        diameter: 30,
-        length: 30,
-        stroke: false,
-        color: '#636',
-        backface: '#C25',
-        rotate: { x: Zdog.TAU / 5 },
-        translate: { y: -74, x: -2 }
-    });
-
-    let box = new Zdog.Box({
-        addTo: illo,
-        width: 50,
-        height: 50,
-        depth: 50,
-        stroke: false,
-        color: '#f26419', // default face color
-        leftFace: '#77b6ea',
-        rightFace: '#77b6ea',
-        topFace: '#ED0',
-        bottomFace: '#636',
-        translate: { y: -40, x: 70 }
-    });
+    let bottomHemi = topHemi.copy({
+        translate: { x: 1 },
+        rotate: { y: Zdog.TAU / 2 }
+    })
 
     // update & render
-    illo.updateRenderGraph();
+    welcomeCanvas.updateRenderGraph();
 
     // Animating
     function animate() {
-        // rotate illo each frame
-        illo.rotate.y += 0.01;
-        illo.updateRenderGraph();
+        // rotate welcomeCanvas each frame
+        welcomeCanvas.rotate.y += 0.01;
+        // topHemi.rotate.x += 0.02;
+        // bottomHemi.rotate.x += 0.02;
+        welcomeCanvas.updateRenderGraph();
         // animate next frame
         requestAnimationFrame(animate);
     }
