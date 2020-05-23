@@ -67,6 +67,20 @@ document.addEventListener("DOMContentLoaded", function () {
         translate: { y: -74, x: -2 }
     });
 
+    let box = new Zdog.Box({
+        addTo: illo,
+        width: 50,
+        height: 50,
+        depth: 50,
+        stroke: false,
+        color: '#f26419', // default face color
+        leftFace: '#77b6ea',
+        rightFace: '#77b6ea',
+        topFace: '#ED0',
+        bottomFace: '#636',
+        translate: { y: -40, x: 70 }
+    });
+
     // update & render
     illo.updateRenderGraph();
 
