@@ -14,17 +14,33 @@ body {
 body {
   background-color: #ffffff;
   color: #2f323a;
+  overflow-x: hidden;
 }
 body #navbar {
   background-color: #33658a;
 }
 body .main #welcome-section {
-  background-color: #ffffff;
+  background-color: #33658a;
   color: #2f323a;
-  padding: 100px;
   height: 100vh;
 }
-body .main #welcome-section .textHighlight {
+body .main #welcome-section .zdog-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #33658a;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+body .main #welcome-section #welcomeText {
+  position: absolute;
+  text-align: center;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+body .main #welcome-section #welcomeText .textHighlight {
   color: #f26419;
 }
 body .main footer {

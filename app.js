@@ -32,41 +32,39 @@ document.addEventListener("DOMContentLoaded", function () {
     // Zdog Demo
     // ==================================================
 
-    // Rotating flag variable
-    let isSpinning = true;
-
-    // create illo
+    // create illustration
     let illo = new Zdog.Illustration({
         // set canvas with selector
         element: ".zdog-canvas",
-        // zoom up 4x
-        zoom: 1.5,
-        // enable rotating scene with dragging
-        dragRotate: true,
-        // stop rotation when dragging starts
-        onDragStart: function () {
-            isSpinning = false;
+        resize: "fullscreen",
+        // zoom number for element
+        zoom: 1,
+        onResize: function (width, height) {
+            // scale zoom
+            let minSize = Math.min(width, height);
+            this.zoom = minSize / 250;
         }
     });
 
-    // add circle
-    new Zdog.Ellipse({
+    let mainBody = new Zdog.Cylinder({
         addTo: illo,
-        diameter: 80,
-        stroke: 20,
-        color: "#636"
+        diameter: 30,
+        length: 120,
+        stroke: false,
+        color: '#C25',
+        backface: '#E62',
+        rotate: { x: Zdog.TAU / 5 }
     });
 
-    // square
-    new Zdog.Rect({
+    let rocketTop = new Zdog.Cone({
         addTo: illo,
-        width: 80,
-        height: 80,
-        // position further back
-        translate: { z: -40 },
-        stroke: 12,
-        color: '#E62',
-        fill: true,
+        diameter: 30,
+        length: 30,
+        stroke: false,
+        color: '#636',
+        backface: '#C25',
+        rotate: { x: Zdog.TAU / 5 },
+        translate: { y: -74, x: -2 }
     });
 
     // update & render
@@ -75,9 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Animating
     function animate() {
         // rotate illo each frame
-        if (isSpinning) {
-            illo.rotate.y += 0.03;
-        }
+        illo.rotate.y += 0.01;
         illo.updateRenderGraph();
         // animate next frame
         requestAnimationFrame(animate);

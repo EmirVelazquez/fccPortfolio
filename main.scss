@@ -22,17 +22,33 @@ body {
 body {
     background-color: #ffffff;
     color: $mainColor;
+    overflow-x: hidden;
     #navbar {
         background-color: $secondColor;
     }
     .main {
         #welcome-section {
-            background-color: #ffffff;
+            background-color: $secondColor;
             color: $mainColor;
-            padding: 100px;
             height: 100vh;
-            .textHighlight {
-                color: $fourthColor;
+            .zdog-canvas {
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: $secondColor;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            #welcomeText {
+                position: absolute;
+                text-align: center;
+                bottom: 10px;
+                left: 50%;
+                transform: translate(-50%);
+                .textHighlight {
+                    color: $fourthColor;
+                }
             }
         }
         footer {
