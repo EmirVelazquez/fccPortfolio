@@ -51,13 +51,12 @@ document.addEventListener("DOMContentLoaded", function () {
         diameter: 20,
         stroke: false,
         color: '#C25',
-        backface: '#E62',
-        translate: { x: 1 },
-        // rotate: { x: Zdog.TAU / 4 }
+        backface: '#E62'
     });
 
     let bottomHemi = topHemi.copy({
-        translate: { x: 1 },
+        addTo: topHemi,
+        translate: { z: -1.5 },
         rotate: { y: Zdog.TAU / 2 }
     })
 
@@ -68,8 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function animate() {
         // rotate welcomeCanvas each frame
         welcomeCanvas.rotate.y += 0.01;
-        // topHemi.rotate.x += 0.02;
-        // bottomHemi.rotate.x += 0.02;
+        topHemi.rotate.x += 0.02;
         welcomeCanvas.updateRenderGraph();
         // animate next frame
         requestAnimationFrame(animate);
