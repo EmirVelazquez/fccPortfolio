@@ -31,14 +31,12 @@ body {
             background-color: $secondColor;
             color: $mainColor;
             height: 100vh;
-            .zdog-canvas {
+            .welcomeCanvas {
                 display: block;
+                margin: 0 auto 0 auto;
                 width: 100%;
                 height: 100%;
                 background-color: $secondColor;
-                position: absolute;
-                top: 0;
-                right: 0;
             }
             #welcomeText {
                 position: absolute;

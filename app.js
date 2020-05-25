@@ -48,26 +48,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let topHemi = new Zdog.Hemisphere({
         addTo: welcomeCanvas,
-        diameter: 20,
+        diameter: 30,
         stroke: false,
         color: '#C25',
-        backface: '#E62'
+        backface: '#E62',
+        translate: { z: 1.25 }
     });
 
     let bottomHemi = topHemi.copy({
         addTo: topHemi,
-        translate: { z: -1.5 },
+        translate: { z: -1.25 },
         rotate: { y: Zdog.TAU / 2 }
     })
+
+
+    let pathOne = new Zdog.Ellipse({
+        addTo: welcomeCanvas,
+        diameter: 200,
+        stroke: 5,
+        color: "rgba(255, 255, 255, 0.5)",
+        translate: { z: 10 },
+        rotate: { x: Zdog.TAU / 4 }
+    })
+
+    let sphereOne = new Zdog.Shape({
+        addTo: pathOne,
+        stroke: 15,
+        color: "#636",
+        translate: { x: 100 }
+    });
 
     // update & render
     welcomeCanvas.updateRenderGraph();
 
     // Animating
     function animate() {
-        // rotate welcomeCanvas each frame
-        welcomeCanvas.rotate.y += 0.01;
+        // rotate center hemispheres each frame
+        topHemi.rotate.y += 0.01;
         topHemi.rotate.x += 0.02;
+        // rotate the path around center hemispheres
+        pathOne.rotate.z += 0.01;
         welcomeCanvas.updateRenderGraph();
         // animate next frame
         requestAnimationFrame(animate);
