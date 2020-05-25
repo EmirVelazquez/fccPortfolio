@@ -29,10 +29,10 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     // ==================================================
-    // Zdog Demo
+    // Zdog 3D Object
     // ==================================================
 
-    // create illustration
+    // Canvas for Zdog Object Illustration
     let welcomeCanvas = new Zdog.Illustration({
         // set canvas with selector
         element: ".welcomeCanvas",
@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    // Center of Model Here //
     let topHemi = new Zdog.Hemisphere({
         addTo: welcomeCanvas,
         diameter: 30,
@@ -60,8 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
         translate: { z: -1.25 },
         rotate: { y: Zdog.TAU / 2 }
     })
+    // Center of Model Here //
 
-
+    // Electron Path's and Electrons //
     let pathOne = new Zdog.Ellipse({
         addTo: welcomeCanvas,
         diameter: 200,
@@ -77,11 +79,12 @@ document.addEventListener("DOMContentLoaded", function () {
         color: "#636",
         translate: { x: 100 }
     });
+    // Electron Path's and Electrons //
 
-    // update & render
+    // Update & Render Canvas
     welcomeCanvas.updateRenderGraph();
 
-    // Animating
+    // Function that Handles animations
     function animate() {
         // rotate center hemispheres each frame
         topHemi.rotate.y += 0.01;
