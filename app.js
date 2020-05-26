@@ -68,9 +68,8 @@ document.addEventListener("DOMContentLoaded", function () {
         addTo: welcomeCanvas,
         diameter: 200,
         stroke: 5,
-        color: "rgba(255, 255, 255, 0.5)",
-        translate: { z: 10 },
-        rotate: { x: Zdog.TAU / 4 }
+        color: "#FFFFFF",
+        rotate: { x: Zdog.TAU / -3.5 }
     })
 
     let sphereOne = new Zdog.Shape({
@@ -79,6 +78,15 @@ document.addEventListener("DOMContentLoaded", function () {
         color: "#636",
         translate: { x: 100 }
     });
+
+    let pathTwo = pathOne.copy({
+        rotate: { y: Zdog.TAU / 3.5 }
+    })
+
+    let sphereTwo = sphereOne.copy({
+        addTo: pathTwo
+    })
+
     // Electron Path's and Electrons //
 
     // Update & Render Canvas
@@ -91,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
         topHemi.rotate.x += 0.02;
         // rotate the path around center hemispheres
         pathOne.rotate.z += 0.01;
+        pathTwo.rotate.z += 0.01;
         welcomeCanvas.updateRenderGraph();
         // animate next frame
         requestAnimationFrame(animate);
