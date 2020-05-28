@@ -51,14 +51,16 @@ document.addEventListener("DOMContentLoaded", function () {
         addTo: welcomeCanvas,
         diameter: 30,
         stroke: false,
-        color: '#C25',
-        backface: '#E62',
-        translate: { z: 1.25 }
+        color: "#33658a",
+        backface: "#77b6ea",
+        translate: { z: 1.5 }
     });
 
     let bottomHemi = topHemi.copy({
         addTo: topHemi,
-        translate: { z: -1.25 },
+        color: "#ee3b3b",
+        backface: "#f06f6f",
+        translate: { z: -1.5 },
         rotate: { y: Zdog.TAU / 2 }
     })
     // Center of Model Here //
@@ -75,7 +77,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let sphereOne = new Zdog.Shape({
         addTo: pathOne,
         stroke: 15,
-        color: "#636", // May need to make the path and sphere the same color.
+        color: "#58ca4e", // May need to make the path and sphere the same color.
+        // color: "#FFFFFF",
         translate: { x: 100 }
     });
 

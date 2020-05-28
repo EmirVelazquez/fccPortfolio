@@ -1,8 +1,9 @@
 $mainColor: #2f323a;
 $secondColor: #33658a;
-$thirdColor: #f6ae2d;
-$fourthColor: #f26419;
+$thirdColor: #f06f6f;
+$fourthColor: #ee3b3b;
 $fifthColor: #77b6ea;
+$sixthColor: #58ca4e;
 $mainText: whitesmoke;
 
 * {
@@ -28,15 +29,13 @@ body {
     }
     .main {
         #welcome-section {
-            background-color: $secondColor;
-            color: $mainColor;
+            background-color: $mainColor;
+            color: $mainText;
             height: 100vh;
+            padding: 0 2rem 1rem 1rem;
             .welcomeCanvas {
-                display: block;
-                margin: 0 auto 0 auto;
                 width: 100%;
-                height: 100%;
-                background-color: $secondColor;
+                background-color: $mainColor;
             }
             #welcomeText {
                 position: absolute;
