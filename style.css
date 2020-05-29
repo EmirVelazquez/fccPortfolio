@@ -18,7 +18,32 @@ body {
 }
 body #navbar {
   background-color: transparent;
-  padding: 0.5rem 4rem;
+  padding: 0.5rem 3rem;
+}
+body #navbar .navbar-brand {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #navbar .navbar-brand svg rect {
+  stroke: whitesmoke;
+}
+body #navbar .navbar-brand svg path {
+  stroke: whitesmoke;
+}
+body #navbar .navbar-brand svg:hover rect {
+  stroke: #ee3b3b;
+}
+body #navbar .navbar-brand svg:hover path {
+  stroke: #ee3b3b;
+}
+body #navbar a {
+  color: whitesmoke;
+}
+body #navbar a:hover {
+  color: #ee3b3b;
 }
 body .main #welcome-section {
   background-color: #33658a;
@@ -41,7 +66,7 @@ body .main #welcome-section #welcomeText {
   margin: 0;
 }
 body .main #welcome-section #welcomeText .textHighlight {
-  color: #77b6ea;
+  color: #ee3b3b;
 }
 body .main footer {
   background-color: lightcoral;
@@ -74,10 +99,16 @@ body .main footer #copyrightContainer {
 }
 
 .updateNav {
-  background-color: #ee3b3b !important;
+  background-color: whitesmoke !important;
 }
-.updateNav #navbarNav {
-  color: #000000 !important;
+.updateNav a {
+  color: #2f323a !important;
+}
+.updateNav .navbar-brand svg rect {
+  stroke: #2f323a !important;
+}
+.updateNav .navbar-brand svg path {
+  stroke: #2f323a !important;
 }
 
 /*# sourceMappingURL=style.css.map */
