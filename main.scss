@@ -25,26 +25,30 @@ body {
     color: $mainColor;
     overflow-x: hidden;
     #navbar {
-        background-color: $secondColor;
+        background-color: transparent;
+        padding: 0.5rem 4rem;
     }
     .main {
         #welcome-section {
-            background-color: $mainColor;
+            background-color: $secondColor;
             color: $mainText;
+            text-align: center;
             height: 100vh;
-            padding: 0 2rem 1rem 1rem;
+            padding: 0 2rem 0 2rem;
             .welcomeCanvas {
                 width: 100%;
-                background-color: $mainColor;
+                background-color: transparent;
+                margin: 0;
+                padding: 0;
             }
             #welcomeText {
                 position: absolute;
-                text-align: center;
                 bottom: 10px;
                 left: 50%;
                 transform: translate(-50%);
+                margin: 0;
                 .textHighlight {
-                    color: $fourthColor;
+                    color: $fifthColor;
                 }
             }
         }
@@ -86,4 +90,7 @@ body {
 
 .updateNav {
     background-color: $fourthColor !important;
+    #navbarNav {
+        color: #000000 !important;
+    }
 }

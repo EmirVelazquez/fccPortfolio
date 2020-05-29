@@ -17,27 +17,31 @@ body {
   overflow-x: hidden;
 }
 body #navbar {
-  background-color: #33658a;
+  background-color: transparent;
+  padding: 0.5rem 4rem;
 }
 body .main #welcome-section {
-  background-color: #2f323a;
+  background-color: #33658a;
   color: whitesmoke;
+  text-align: center;
   height: 100vh;
-  padding: 0 2rem 1rem 1rem;
+  padding: 0 2rem 0 2rem;
 }
 body .main #welcome-section .welcomeCanvas {
   width: 100%;
-  background-color: #2f323a;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
 }
 body .main #welcome-section #welcomeText {
   position: absolute;
-  text-align: center;
   bottom: 10px;
   left: 50%;
   transform: translate(-50%);
+  margin: 0;
 }
 body .main #welcome-section #welcomeText .textHighlight {
-  color: #ee3b3b;
+  color: #77b6ea;
 }
 body .main footer {
   background-color: lightcoral;
@@ -71,6 +75,9 @@ body .main footer #copyrightContainer {
 
 .updateNav {
   background-color: #ee3b3b !important;
+}
+.updateNav #navbarNav {
+  color: #000000 !important;
 }
 
 /*# sourceMappingURL=style.css.map */

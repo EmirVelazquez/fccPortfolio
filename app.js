@@ -37,12 +37,10 @@ document.addEventListener("DOMContentLoaded", function () {
         // set canvas with selector
         element: ".welcomeCanvas",
         resize: "fullscreen",
-        // zoom number for element
-        zoom: 1,
         onResize: function (width, height) {
             // scale zoom
             let minSize = Math.min(width, height);
-            this.zoom = minSize / 250;
+            this.zoom = minSize / 310;
         }
     });
 
@@ -51,16 +49,16 @@ document.addEventListener("DOMContentLoaded", function () {
         addTo: welcomeCanvas,
         diameter: 30,
         stroke: false,
-        color: "#33658a",
-        backface: "#77b6ea",
-        translate: { z: 1.5 }
+        color: "#4169e1",
+        backface: "#6280da",
+        translate: { z: 1.75 }
     });
 
     let bottomHemi = topHemi.copy({
         addTo: topHemi,
         color: "#ee3b3b",
         backface: "#f06f6f",
-        translate: { z: -1.5 },
+        translate: { z: -1.75 },
         rotate: { y: Zdog.TAU / 2 }
     })
     // Center of Model Here //
@@ -77,8 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let sphereOne = new Zdog.Shape({
         addTo: pathOne,
         stroke: 15,
-        color: "#58ca4e", // May need to make the path and sphere the same color.
-        // color: "#FFFFFF",
+        color: "#EEEEEE",
         translate: { x: 100 }
     });
 
@@ -125,6 +122,12 @@ document.addEventListener("DOMContentLoaded", function () {
         // animate next frame
         requestAnimationFrame(animate);
     }
-    // start animation
+
+    // Start animation for 3d Model
     animate();
+
+    // ==================================================
+    // Zdog 3D Object
+    // ==================================================
+
 })
