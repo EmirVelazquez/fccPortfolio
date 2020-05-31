@@ -1,10 +1,8 @@
-$mainColor: #2f323a;
-$secondColor: #33658a;
-$thirdColor: #f06f6f;
-$fourthColor: #ee3b3b;
-$fifthColor: #77b6ea;
-$sixthColor: #58ca4e;
 $mainText: whitesmoke;
+$textAlt: #2f323a;
+$mainColor: #33658a;
+$protonColor: #ee3b3b;
+$neutronColor: #4169e1;
 
 * {
     box-sizing: border-box;
@@ -22,7 +20,7 @@ body {
 
 body {
     background-color: #ffffff;
-    color: $mainColor;
+    color: $textAlt;
     overflow-x: hidden;
     #navbar {
         background-color: transparent;
@@ -30,36 +28,27 @@ body {
         .navbar-brand {
             width: 4rem;
             height: 4rem;
-            // display: flex;
-            // justify-content: center;
-            // align-items: center;
             svg {
                 path {
                     stroke: $mainText;
                 }
-                rect {
-                    stroke: $mainText;
-                }
                 &:hover {
                     path {
-                        stroke: $fourthColor;
-                    }
-                    rect {
-                        stroke: $fourthColor;
+                        stroke: $protonColor;
                     }
                 }
             }
         }
         a {
             &:hover {
-                color: $fourthColor;
+                color: $protonColor;
             }
             color: $mainText;
         }
     }
     .main {
         #welcome-section {
-            background-color: $secondColor;
+            background-color: $mainColor;
             color: $mainText;
             text-align: center;
             height: 100vh;
@@ -77,7 +66,7 @@ body {
                 transform: translate(-50%);
                 margin: 0;
                 .textHighlight {
-                    color: $fourthColor;
+                    color: $protonColor;
                 }
             }
         }
@@ -120,15 +109,20 @@ body {
 .updateNav {
     background-color: $mainText !important;
     a {
-        color: $mainColor !important;
+        color: $textAlt !important;
+        &:hover {
+            color: $neutronColor !important;
+        }
     }
     .navbar-brand {
         svg {
-            rect {
-                stroke: $mainColor !important;
-            }
             path {
-                stroke: $mainColor !important;
+                stroke: $textAlt !important;
+            }
+            &:hover {
+                path {
+                    stroke: $neutronColor !important;
+                }
             }
         }
     }

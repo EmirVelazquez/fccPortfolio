@@ -27,13 +27,7 @@ body #navbar .navbar-brand {
 body #navbar .navbar-brand svg path {
   stroke: whitesmoke;
 }
-body #navbar .navbar-brand svg rect {
-  stroke: whitesmoke;
-}
 body #navbar .navbar-brand svg:hover path {
-  stroke: #ee3b3b;
-}
-body #navbar .navbar-brand svg:hover rect {
   stroke: #ee3b3b;
 }
 body #navbar a {
@@ -101,11 +95,14 @@ body .main footer #copyrightContainer {
 .updateNav a {
   color: #2f323a !important;
 }
-.updateNav .navbar-brand svg rect {
-  stroke: #2f323a !important;
+.updateNav a:hover {
+  color: #4169e1 !important;
 }
 .updateNav .navbar-brand svg path {
   stroke: #2f323a !important;
+}
+.updateNav .navbar-brand svg:hover path {
+  stroke: #4169e1 !important;
 }
 
 /*# sourceMappingURL=style.css.map */
