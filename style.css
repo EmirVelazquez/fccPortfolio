@@ -23,20 +23,17 @@ body #navbar {
 body #navbar .navbar-brand {
   width: 4rem;
   height: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body #navbar .navbar-brand svg rect {
-  stroke: whitesmoke;
 }
 body #navbar .navbar-brand svg path {
   stroke: whitesmoke;
 }
-body #navbar .navbar-brand svg:hover rect {
-  stroke: #ee3b3b;
+body #navbar .navbar-brand svg rect {
+  stroke: whitesmoke;
 }
 body #navbar .navbar-brand svg:hover path {
+  stroke: #ee3b3b;
+}
+body #navbar .navbar-brand svg:hover rect {
   stroke: #ee3b3b;
 }
 body #navbar a {

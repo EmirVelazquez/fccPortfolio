@@ -30,21 +30,21 @@ body {
         .navbar-brand {
             width: 4rem;
             height: 4rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
             svg {
-                rect {
-                    stroke: $mainText;
-                }
                 path {
                     stroke: $mainText;
                 }
+                rect {
+                    stroke: $mainText;
+                }
                 &:hover {
-                    rect {
+                    path {
                         stroke: $fourthColor;
                     }
-                    path {
+                    rect {
                         stroke: $fourthColor;
                     }
                 }
