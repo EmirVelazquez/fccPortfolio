@@ -19,7 +19,7 @@ body {
 }
 
 body {
-    background-color: #ffffff;
+    background-color: $mainText;
     color: $textAlt;
     overflow-x: hidden;
     #navbar {
@@ -70,6 +70,18 @@ body {
                 }
             }
         }
+        #aboutSection {
+            background-color: $mainText;
+            color: $textAlt;
+            text-align: center;
+            padding: 6rem;
+            h2 {
+                margin: 0 0 2rem 0;
+            }
+            #aboutPara {
+                font-size: 1.5rem;
+            }
+        }
         footer {
             background-color: lightcoral;
             width: 100%;
@@ -108,6 +120,7 @@ body {
 
 .updateNav {
     background-color: $mainText !important;
+    border-bottom: 4px solid $mainColor;
     a {
         color: $textAlt !important;
         &:hover {

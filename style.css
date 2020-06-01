@@ -12,7 +12,7 @@ body {
 }
 
 body {
-  background-color: #ffffff;
+  background-color: whitesmoke;
   color: #2f323a;
   overflow-x: hidden;
 }
@@ -59,6 +59,18 @@ body .main #welcome-section #welcomeText {
 body .main #welcome-section #welcomeText .textHighlight {
   color: #ee3b3b;
 }
+body .main #aboutSection {
+  background-color: whitesmoke;
+  color: #2f323a;
+  text-align: center;
+  padding: 6rem;
+}
+body .main #aboutSection h2 {
+  margin: 0 0 2rem 0;
+}
+body .main #aboutSection #aboutPara {
+  font-size: 1.5rem;
+}
 body .main footer {
   background-color: lightcoral;
   width: 100%;
@@ -91,6 +103,7 @@ body .main footer #copyrightContainer {
 
 .updateNav {
   background-color: whitesmoke !important;
+  border-bottom: 4px solid #33658a;
 }
 .updateNav a {
   color: #2f323a !important;
