@@ -3,6 +3,7 @@ $textAlt: #2f323a;
 $mainColor: #33658a;
 $protonColor: #ee3b3b;
 $neutronColor: #4169e1;
+$ubuntuFont: "Ubuntu", sans-serif;
 
 * {
     box-sizing: border-box;
@@ -22,6 +23,7 @@ body {
     background-color: $mainText;
     color: $textAlt;
     overflow-x: hidden;
+    font-family: $ubuntuFont;
     #navbar {
         background-color: transparent;
         padding: 0.5rem 3rem;
@@ -40,6 +42,9 @@ body {
             }
         }
         a {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-left: 2rem;
             &:hover {
                 color: $protonColor;
             }

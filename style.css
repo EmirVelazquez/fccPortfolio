@@ -15,6 +15,7 @@ body {
   background-color: whitesmoke;
   color: #2f323a;
   overflow-x: hidden;
+  font-family: "Ubuntu", sans-serif;
 }
 body #navbar {
   background-color: transparent;
@@ -31,6 +32,9 @@ body #navbar .navbar-brand svg:hover path {
   stroke: #ee3b3b;
 }
 body #navbar a {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-left: 2rem;
   color: whitesmoke;
 }
 body #navbar a:hover {
