@@ -72,7 +72,10 @@ body .main #aboutSection {
 body .main #aboutSection h2 {
   margin: 0 0 2rem 0;
 }
-body .main #aboutSection #aboutPara {
+body .main #aboutSection .aboutCol {
+  padding: 0 15%;
+}
+body .main #aboutSection .aboutCol #aboutPara {
   font-size: 1.5rem;
 }
 body .main footer {
