@@ -4,13 +4,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // ==================================================
 
     const navBar = document.getElementById("navbar");
-    console.log("Hola Amigos!");
+    const projectTile = document.getElementsByClassName("project-tile");
 
     // ==================================================
     // Main Executions
     // ==================================================
 
     colorNav();
+    giveTileId();
 
     // ==================================================
     // Helper Functions
@@ -27,6 +28,12 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     };
+
+    function giveTileId() {
+        for (var i = 0; i < projectTile.length; i++) {
+            projectTile[i].setAttribute("id", "project" + i)
+        }
+    }
 
     // ==================================================
     // Zdog 3D Object

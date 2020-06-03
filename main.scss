@@ -76,18 +76,33 @@ body {
             }
         }
         #aboutSection {
+            height: 50vh;
             background-color: $mainText;
             color: $textAlt;
             text-align: center;
             padding: 6rem;
             h2 {
-                margin: 0 0 2rem 0;
+                margin: 4rem 0;
             }
             .aboutCol {
                 padding: 0 15%;
                 #aboutPara {
                     font-size: 1.5rem;
                 }
+            }
+        }
+        .sectHeader {
+            text-align: center;
+            margin: 4rem 0;
+        }
+        #projects {
+            padding: 0 3rem;
+            .project-tile {
+                text-align: center;
+                background-color: pink;
+            }
+            .testingColor {
+                background-color: #000000;
             }
         }
         footer {

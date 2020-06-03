@@ -64,19 +64,34 @@ body .main #welcome-section #welcomeText .textHighlight {
   color: #ee3b3b;
 }
 body .main #aboutSection {
+  height: 50vh;
   background-color: whitesmoke;
   color: #2f323a;
   text-align: center;
   padding: 6rem;
 }
 body .main #aboutSection h2 {
-  margin: 0 0 2rem 0;
+  margin: 4rem 0;
 }
 body .main #aboutSection .aboutCol {
   padding: 0 15%;
 }
 body .main #aboutSection .aboutCol #aboutPara {
   font-size: 1.5rem;
+}
+body .main .sectHeader {
+  text-align: center;
+  margin: 4rem 0;
+}
+body .main #projects {
+  padding: 0 3rem;
+}
+body .main #projects .project-tile {
+  text-align: center;
+  background-color: pink;
+}
+body .main #projects .testingColor {
+  background-color: #000000;
 }
 body .main footer {
   background-color: lightcoral;
