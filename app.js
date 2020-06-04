@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const projectTile = document.getElementsByClassName("project-tile");
     const projectSection = document.getElementById("projects");
     const projectOne = "project0";
+    const projectTwo = "project1";
+    const projectThree = "project2";
+    const projectFour = "project3";
 
     // ==================================================
     // Main Executions
@@ -46,7 +49,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 event.target.addEventListener("mouseout", function () {
                     event.target.style.backgroundColor = "pink";
                 });
-            };
+            } else if (hoveringOver === projectTwo) {
+                event.target.style.backgroundColor = "blue";
+                event.target.addEventListener("mouseout", function () {
+                    event.target.style.backgroundColor = "pink";
+                });
+            } else if (hoveringOver === projectThree) {
+                event.target.style.backgroundColor = "red";
+                event.target.addEventListener("mouseout", function () {
+                    event.target.style.backgroundColor = "pink";
+                });
+            } else if (hoveringOver === projectFour) {
+                event.target.style.backgroundColor = "yellow";
+                event.target.addEventListener("mouseout", function () {
+                    event.target.style.backgroundColor = "pink";
+                });
+            }
         });
     };
 
