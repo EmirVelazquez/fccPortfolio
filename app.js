@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     colorNav();
     giveTileId();
-    addClassToTile();
+    handleTileHover();
 
     // ==================================================
     // Helper Functions
@@ -35,19 +35,20 @@ document.addEventListener("DOMContentLoaded", function () {
     function giveTileId() {
         for (var i = 0; i < projectTile.length; i++) {
             projectTile[i].setAttribute("id", "project" + i)
-        }
-    }
+        };
+    };
 
-    function addClassToTile() {
+    function handleTileHover() {
         projectSection.addEventListener("mouseover", function (event) {
             let hoveringOver = String(event.target.id);
             if (hoveringOver === projectOne) {
-                console.log(hoveringOver);
                 event.target.style.backgroundColor = "black";
-            }
-        })
-    }
-
+                event.target.addEventListener("mouseout", function () {
+                    event.target.style.backgroundColor = "pink";
+                });
+            };
+        });
+    };
 
     // ==================================================
     // Zdog 3D Object
