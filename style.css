@@ -84,6 +84,7 @@ body .main .sectHeader {
   margin: 4rem 0;
 }
 body .main #projects {
+  height: 50vh;
   padding: 0 3rem;
 }
 body .main #projects .project-tile {

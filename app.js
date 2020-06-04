@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const navBar = document.getElementById("navbar");
     const projectTile = document.getElementsByClassName("project-tile");
+    const projectSection = document.getElementById("projects");
+    const projectOne = "project0";
 
     // ==================================================
     // Main Executions
@@ -12,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     colorNav();
     giveTileId();
+    addClassToTile();
 
     // ==================================================
     // Helper Functions
@@ -34,6 +37,17 @@ document.addEventListener("DOMContentLoaded", function () {
             projectTile[i].setAttribute("id", "project" + i)
         }
     }
+
+    function addClassToTile() {
+        projectSection.addEventListener("mouseover", function (event) {
+            let hoveringOver = String(event.target.id);
+            if (hoveringOver === projectOne) {
+                console.log(hoveringOver);
+                event.target.style.backgroundColor = "black";
+            }
+        })
+    }
+
 
     // ==================================================
     // Zdog 3D Object
