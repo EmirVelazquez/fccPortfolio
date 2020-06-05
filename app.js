@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
     // ==================================================
-    // References to elements or Global variables
+    // References to elements, Global variables, or Flags
     // ==================================================
 
     const navBar = document.getElementById("navbar");
-    const projectTile = document.getElementsByClassName("project-tile");
+    const projectImg = document.getElementsByClassName("projectImg");
     const projectSection = document.getElementById("projects");
-    const projectOne = "project0";
-    const projectTwo = "project1";
-    const projectThree = "project2";
-    const projectFour = "project3";
+    var imgOneHidden = false;
+    var imgTwoHidden = false;
+    var imgThreeHidden = false;
+    var imgFourHidden = false;
 
     // ==================================================
     // Main Executions
@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     colorNav();
     giveTileId();
     handleTileHover();
+    revertTileNormal();
 
     // ==================================================
     // Helper Functions
@@ -36,34 +37,70 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     function giveTileId() {
-        for (var i = 0; i < projectTile.length; i++) {
-            projectTile[i].setAttribute("id", "project" + i)
+        for (var i = 0; i < projectImg.length; i++) {
+            projectImg[i].setAttribute("id", "project" + i)
         };
     };
 
     function handleTileHover() {
         projectSection.addEventListener("mouseover", function (event) {
             let hoveringOver = String(event.target.id);
-            if (hoveringOver === projectOne) {
-                event.target.style.backgroundColor = "black";
-                event.target.addEventListener("mouseout", function () {
-                    event.target.style.backgroundColor = "pink";
-                });
-            } else if (hoveringOver === projectTwo) {
-                event.target.style.backgroundColor = "blue";
-                event.target.addEventListener("mouseout", function () {
-                    event.target.style.backgroundColor = "pink";
-                });
-            } else if (hoveringOver === projectThree) {
-                event.target.style.backgroundColor = "red";
-                event.target.addEventListener("mouseout", function () {
-                    event.target.style.backgroundColor = "pink";
-                });
-            } else if (hoveringOver === projectFour) {
-                event.target.style.backgroundColor = "yellow";
-                event.target.addEventListener("mouseout", function () {
-                    event.target.style.backgroundColor = "pink";
-                });
+            console.log(hoveringOver);
+            if (hoveringOver === "project0") {
+                let projectOneImg = document.getElementById("project0");
+                let projectOneLink = document.getElementById("projectOneLink");
+                projectOneImg.style.display = "none";
+                projectOneLink.style.zIndex = "2";
+                imgOneHidden = true;
+            } else if (hoveringOver === "project1") {
+                let projectTwoImg = document.getElementById("project1");
+                let projectTwoLink = document.getElementById("projectTwoLink");
+                projectTwoImg.style.display = "none";
+                projectTwoLink.style.zIndex = "2";
+                imgTwoHidden = true;
+            } else if (hoveringOver === "project2") {
+                let projectThreeImg = document.getElementById("project2");
+                let projectThreeLink = document.getElementById("projectThreeLink");
+                projectThreeImg.style.display = "none";
+                projectThreeLink.style.zIndex = "2";
+                imgThreeHidden = true;
+            } else if (hoveringOver === "project3") {
+                let projectFourImg = document.getElementById("project3");
+                let projectFourLink = document.getElementById("projectFourLink");
+                projectFourImg.style.display = "none";
+                projectFourLink.style.zIndex = "2";
+                imgFourHidden = true;
+            }
+        });
+    };
+
+    function revertTileNormal() {
+        projectSection.addEventListener("mouseout", function (event) {
+            let hoveringOver = String(event.target.id);
+            if (hoveringOver !== "project0" && imgOneHidden) {
+                let projectOneImg = document.getElementById("project0");
+                let projectOneLink = document.getElementById("projectOneLink");
+                projectOneImg.style.display = "block";
+                projectOneLink.style.zIndex = "0";
+                imgOneHidden = false;
+            } else if (hoveringOver !== "project1" && imgTwoHidden) {
+                let projectTwoImg = document.getElementById("project1");
+                let projectTwoLink = document.getElementById("projectTwoLink");
+                projectTwoImg.style.display = "block";
+                projectTwoLink.style.zIndex = "0";
+                imgTwoHidden = false;
+            } else if (hoveringOver !== "project2" && imgThreeHidden) {
+                let projectThreeImg = document.getElementById("project2");
+                let projectThreeLink = document.getElementById("projectThreeLink");
+                projectThreeImg.style.display = "block";
+                projectThreeLink.style.zIndex = "0";
+                imgThreeHidden = false;
+            } else if (hoveringOver !== "project3" && imgFourHidden) {
+                let projectFourImg = document.getElementById("project3");
+                let projectFourLink = document.getElementById("projectFourLink");
+                projectFourImg.style.display = "block";
+                projectFourLink.style.zIndex = "0";
+                imgFourHidden = false;
             }
         });
     };
