@@ -46,11 +46,13 @@ document.addEventListener("DOMContentLoaded", function () {
         projectSection.addEventListener("mouseover", function (event) {
             let hoveringOver = String(event.target.id);
             console.log(hoveringOver);
-            if (hoveringOver === "project0") {
+            if (hoveringOver === "project0" || hoveringOver === "projectOneLink" || hoveringOver === "projectOneTitle" || hoveringOver === "projectOneBtn") {
                 let projectOneImg = document.getElementById("project0");
                 let projectOneLink = document.getElementById("projectOneLink");
+                let projectOneTitle = document.getElementById("projectOneTitle");
                 projectOneImg.style.display = "none";
                 projectOneLink.style.zIndex = "2";
+                projectOneTitle.style.zIndex = "2";
                 imgOneHidden = true;
             } else if (hoveringOver === "project1") {
                 let projectTwoImg = document.getElementById("project1");
@@ -77,11 +79,14 @@ document.addEventListener("DOMContentLoaded", function () {
     function revertTileNormal() {
         projectSection.addEventListener("mouseout", function (event) {
             let hoveringOver = String(event.target.id);
+            console.log(hoveringOver);
             if (hoveringOver !== "project0" && imgOneHidden) {
                 let projectOneImg = document.getElementById("project0");
                 let projectOneLink = document.getElementById("projectOneLink");
+                let projectOneTitle = document.getElementById("projectOneTitle");
                 projectOneImg.style.display = "block";
                 projectOneLink.style.zIndex = "0";
+                projectOneTitle.style.zIndex = "0";
                 imgOneHidden = false;
             } else if (hoveringOver !== "project1" && imgTwoHidden) {
                 let projectTwoImg = document.getElementById("project1");

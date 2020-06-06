@@ -84,17 +84,24 @@ body .main .sectHeader {
   margin: 4rem 0;
 }
 body .main #projects {
-  height: 50vh;
+  height: 40vh;
   padding: 0 3rem;
+}
+body .main #projects .projectCol {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
 }
 body .main #projects .project-tile {
   text-align: center;
   background-color: #33658a;
   color: whitesmoke;
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 450px;
+  height: 450px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
 }
 body .main #projects .project-tile .ImgContainer {
@@ -107,6 +114,19 @@ body .main #projects .project-tile .ImgContainer .projectImg {
   border-radius: 10px;
   width: 100%;
   height: 100%;
+}
+body .main #projects .project-tile .projectTitles {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  padding: 4rem 0;
+}
+body .main #projects .project-tile .projectLinks {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
 }
 body .main #projects .testingColor {
   background-color: #000000;
