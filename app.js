@@ -45,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function handleTileHover() {
         projectSection.addEventListener("mouseover", function (event) {
             let hoveringOver = String(event.target.id);
-            console.log(hoveringOver);
             if (hoveringOver === "project0" || hoveringOver === "projectOneLink" || hoveringOver === "projectOneTitle" || hoveringOver === "projectOneBtn") {
                 let projectOneImg = document.getElementById("project0");
                 let projectOneLink = document.getElementById("projectOneLink");
@@ -62,17 +61,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 projectTwoLink.style.zIndex = "2";
                 projectTwoTitle.style.zIndex = "2";
                 imgTwoHidden = true;
-            } else if (hoveringOver === "project2") {
+            } else if (hoveringOver === "project2" || hoveringOver === "projectThreeLink" || hoveringOver === "projectThreeTitle" || hoveringOver === "projectThreeBtn") {
                 let projectThreeImg = document.getElementById("project2");
                 let projectThreeLink = document.getElementById("projectThreeLink");
+                let projectThreeTitle = document.getElementById("projectThreeTitle");
                 projectThreeImg.style.display = "none";
                 projectThreeLink.style.zIndex = "2";
+                projectThreeTitle.style.zIndex = "2";
                 imgThreeHidden = true;
-            } else if (hoveringOver === "project3") {
+            } else if (hoveringOver === "project3" || hoveringOver === "projectFourLink" || hoveringOver === "projectFourTitle" || hoveringOver === "projectFourBtn") {
                 let projectFourImg = document.getElementById("project3");
                 let projectFourLink = document.getElementById("projectFourLink");
+                let projectFourTitle = document.getElementById("projectFourTitle");
                 projectFourImg.style.display = "none";
                 projectFourLink.style.zIndex = "2";
+                projectFourTitle.style.zIndex = "2";
                 imgFourHidden = true;
             }
         });
@@ -81,7 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function revertTileNormal() {
         projectSection.addEventListener("mouseout", function (event) {
             let hoveringOver = String(event.target.id);
-            console.log(hoveringOver);
             if (hoveringOver !== "project0" && imgOneHidden) {
                 let projectOneImg = document.getElementById("project0");
                 let projectOneLink = document.getElementById("projectOneLink");
@@ -101,14 +103,18 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (hoveringOver !== "project2" && imgThreeHidden) {
                 let projectThreeImg = document.getElementById("project2");
                 let projectThreeLink = document.getElementById("projectThreeLink");
+                let projectThreeTitle = document.getElementById("projectThreeTitle");
                 projectThreeImg.style.display = "block";
                 projectThreeLink.style.zIndex = "0";
+                projectThreeTitle.style.zIndex = "0";
                 imgThreeHidden = false;
             } else if (hoveringOver !== "project3" && imgFourHidden) {
                 let projectFourImg = document.getElementById("project3");
                 let projectFourLink = document.getElementById("projectFourLink");
+                let projectFourTitle = document.getElementById("projectFourTitle");
                 projectFourImg.style.display = "block";
                 projectFourLink.style.zIndex = "0";
+                projectFourTitle.style.zIndex = "0";
                 imgFourHidden = false;
             }
         });
