@@ -54,11 +54,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 projectOneLink.style.zIndex = "2";
                 projectOneTitle.style.zIndex = "2";
                 imgOneHidden = true;
-            } else if (hoveringOver === "project1") {
+            } else if (hoveringOver === "project1" || hoveringOver === "projectTwoLink" || hoveringOver === "projectTwoTitle" || hoveringOver === "projectTwoBtn") {
                 let projectTwoImg = document.getElementById("project1");
                 let projectTwoLink = document.getElementById("projectTwoLink");
+                let projectTwoTitle = document.getElementById("projectTwoTitle");
                 projectTwoImg.style.display = "none";
                 projectTwoLink.style.zIndex = "2";
+                projectTwoTitle.style.zIndex = "2";
                 imgTwoHidden = true;
             } else if (hoveringOver === "project2") {
                 let projectThreeImg = document.getElementById("project2");
@@ -91,8 +93,10 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (hoveringOver !== "project1" && imgTwoHidden) {
                 let projectTwoImg = document.getElementById("project1");
                 let projectTwoLink = document.getElementById("projectTwoLink");
+                let projectTwoTitle = document.getElementById("projectTwoTitle");
                 projectTwoImg.style.display = "block";
                 projectTwoLink.style.zIndex = "0";
+                projectTwoTitle.style.zIndex = "0";
                 imgTwoHidden = false;
             } else if (hoveringOver !== "project2" && imgThreeHidden) {
                 let projectThreeImg = document.getElementById("project2");
