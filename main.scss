@@ -93,11 +93,12 @@ body {
         }
         .sectHeader {
             text-align: center;
-            margin: 4rem 0;
+            margin: 10rem 0 3rem 0;
         }
         #projects {
             height: 40vh;
             padding: 0 3rem;
+            margin: 0 0 10rem 0;
             .projectCol {
                 display: flex;
                 justify-content: center;
@@ -108,8 +109,8 @@ body {
                 background-color: $mainColor;
                 color: $mainText;
                 position: relative;
-                width: 450px;
-                height: 450px;
+                width: 400px;
+                height: 400px;
                 display: flex;
                 justify-content: center;
                 align-items: center;

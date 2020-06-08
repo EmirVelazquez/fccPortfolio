@@ -81,11 +81,12 @@ body .main #aboutSection .aboutCol #aboutPara {
 }
 body .main .sectHeader {
   text-align: center;
-  margin: 4rem 0;
+  margin: 10rem 0 3rem 0;
 }
 body .main #projects {
   height: 40vh;
   padding: 0 3rem;
+  margin: 0 0 10rem 0;
 }
 body .main #projects .projectCol {
   display: flex;
@@ -97,8 +98,8 @@ body .main #projects .project-tile {
   background-color: #33658a;
   color: whitesmoke;
   position: relative;
-  width: 450px;
-  height: 450px;
+  width: 400px;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
