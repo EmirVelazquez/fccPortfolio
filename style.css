@@ -95,7 +95,7 @@ body .main #projects .projectCol {
 }
 body .main #projects .project-tile {
   text-align: center;
-  background-color: #33658a;
+  background-color: #2f323a;
   color: whitesmoke;
   position: relative;
   width: 400px;
@@ -128,6 +128,19 @@ body .main #projects .project-tile .projectLinks {
   bottom: 0;
   width: 100%;
   height: 50%;
+}
+body .main #projects .project-tile .projectLinks .projectButtons {
+  border: 2px solid #33658a;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 8px;
+  width: 150px;
+  height: 40px;
+  color: whitesmoke;
+}
+body .main #projects .project-tile .projectLinks .projectButtons:hover {
+  background-color: #33658a;
 }
 body .main #projects .testingColor {
   background-color: #000000;
