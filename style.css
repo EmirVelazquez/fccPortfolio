@@ -40,6 +40,15 @@ body #navbar a {
 body #navbar a:hover {
   color: #ee3b3b;
 }
+body .main {
+  min-height: 100vh;
+  /* Cover 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding: 0 0 300px 0 !important;
+  /* Bottom padding same as height of footer */
+}
 body .main #welcome-section {
   background-color: #33658a;
   color: whitesmoke;
@@ -60,6 +69,9 @@ body .main #welcome-section #welcomeText {
   transform: translate(-50%);
   margin: 0;
 }
+body .main #welcome-section #welcomeText h1 {
+  font-size: 2rem;
+}
 body .main #welcome-section #welcomeText .textHighlight {
   color: #ee3b3b;
 }
@@ -69,6 +81,7 @@ body .main #aboutSection {
   color: #2f323a;
   text-align: center;
   padding: 6rem;
+  margin-bottom: 12rem;
 }
 body .main #aboutSection h2 {
   margin: 4rem 0;
@@ -81,7 +94,7 @@ body .main #aboutSection .aboutCol #aboutPara {
 }
 body .main .sectHeader {
   text-align: center;
-  margin: 10rem 0 3rem 0;
+  margin-bottom: 6rem;
 }
 body .main #projects {
   height: 40vh;
@@ -92,14 +105,15 @@ body .main #projects .projectCol {
   display: flex;
   justify-content: center;
   padding: 2rem 0;
+  padding: 10px;
 }
 body .main #projects .project-tile {
   text-align: center;
   background-color: #2f323a;
   color: whitesmoke;
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -142,13 +156,18 @@ body .main #projects .project-tile .projectLinks .projectButtons {
 body .main #projects .project-tile .projectLinks .projectButtons:hover {
   background-color: #33658a;
 }
-body .main #projects .testingColor {
-  background-color: #000000;
+body .main #contactSection {
+  text-align: center;
+  padding: 6rem;
+  height: 50vh;
 }
 body .main footer {
-  background-color: lightcoral;
+  position: absolute;
+  bottom: 0;
+  background-color: #33658a;
+  color: whitesmoke;
   width: 100%;
-  height: 150px;
+  height: 300px;
 }
 body .main footer #socialIcons {
   display: flex;
