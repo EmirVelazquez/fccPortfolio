@@ -41,6 +41,24 @@ body {
                 }
             }
         }
+        .navbar-toggler {
+            width: 50px;
+            height: 40px;
+            border: 1px solid $mainText;
+            &:hover {
+                border-color: $protonColor;
+                .line {
+                    background-color: $protonColor;
+                }
+            }
+            .line {
+                width: 100%;
+                float: left;
+                height: 2px;
+                background-color: $mainText;
+                margin-bottom: 5px;
+            }
+        }
         a {
             font-size: 1.25rem;
             font-weight: 500;
@@ -227,6 +245,18 @@ body {
                     stroke: $neutronColor !important;
                 }
             }
+        }
+    }
+    .navbar-toggler {
+        border-color: $textAlt !important;
+        &:hover {
+            border-color: $neutronColor !important;
+            .line {
+                background-color: $neutronColor !important;
+            }
+        }
+        .line {
+            background-color: $textAlt !important;
         }
     }
 }

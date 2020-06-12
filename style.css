@@ -31,6 +31,24 @@ body #navbar .navbar-brand svg path {
 body #navbar .navbar-brand svg:hover path {
   stroke: #ee3b3b;
 }
+body #navbar .navbar-toggler {
+  width: 50px;
+  height: 40px;
+  border: 1px solid whitesmoke;
+}
+body #navbar .navbar-toggler:hover {
+  border-color: #ee3b3b;
+}
+body #navbar .navbar-toggler:hover .line {
+  background-color: #ee3b3b;
+}
+body #navbar .navbar-toggler .line {
+  width: 100%;
+  float: left;
+  height: 2px;
+  background-color: whitesmoke;
+  margin-bottom: 5px;
+}
 body #navbar a {
   font-size: 1.25rem;
   font-weight: 500;
@@ -209,6 +227,18 @@ body .main footer #copyrightContainer {
 }
 .updateNav .navbar-brand svg:hover path {
   stroke: #4169e1 !important;
+}
+.updateNav .navbar-toggler {
+  border-color: #2f323a !important;
+}
+.updateNav .navbar-toggler:hover {
+  border-color: #4169e1 !important;
+}
+.updateNav .navbar-toggler:hover .line {
+  background-color: #4169e1 !important;
+}
+.updateNav .navbar-toggler .line {
+  background-color: #2f323a !important;
 }
 
 /*# sourceMappingURL=style.css.map */
