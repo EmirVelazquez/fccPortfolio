@@ -178,6 +178,16 @@ body .main #contactSection {
   text-align: center;
   padding: 6rem;
   height: 50vh;
+  margin-bottom: 10rem;
+}
+body .main #contactSection form {
+  margin: 0 auto;
+  width: 50%;
+}
+body .main #contactSection form .form-control {
+  margin-bottom: 4px;
+  color: whitesmoke;
+  background-color: #33658a;
 }
 body .main footer {
   position: absolute;
@@ -210,6 +220,9 @@ body .main footer #socialIcons .socialWrapper .socialSvg {
 }
 body .main footer #copyrightContainer {
   font-size: 14px;
+}
+body ::placeholder {
+  color: #d6d5d5 !important;
 }
 
 .updateNav {

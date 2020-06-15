@@ -186,6 +186,16 @@ body {
             text-align: center;
             padding: 6rem;
             height: 50vh;
+            margin-bottom: 10rem;
+            form {
+                margin: 0 auto;
+                width: 50%;
+                .form-control {
+                    margin-bottom: 4px;
+                    color: $mainText;
+                    background-color: $mainColor;
+                }
+            }
         }
         footer {
             position: absolute;
@@ -223,6 +233,9 @@ body {
                 font-size: 14px;
             }
         }
+    }
+    ::placeholder {
+        color: #d6d5d5 !important;
     }
 }
 
