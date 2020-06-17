@@ -64,7 +64,7 @@ body .main {
   overflow: hidden;
   display: block;
   position: relative;
-  padding: 0 0 300px 0 !important;
+  padding: 0 0 200px 0 !important;
   /* Bottom padding same as height of footer */
 }
 body .main #welcome-section {
@@ -207,18 +207,22 @@ body .main footer {
   background-color: #33658a;
   color: whitesmoke;
   width: 100%;
-  height: 300px;
+  height: 200px;
 }
 body .main footer #socialIcons {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
 }
 body .main footer #socialIcons .socialWrapper {
   display: block;
-  margin: 0 10px 0 0;
+  margin: 0 5px 0 0;
   border: 2px solid whitesmoke;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   padding: 3px;
 }
 body .main footer #socialIcons .socialWrapper:hover {
@@ -231,6 +235,10 @@ body .main footer #socialIcons .socialWrapper .socialSvg {
   fill: whitesmoke !important;
 }
 body .main footer #copyrightContainer {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%);
   font-size: 14px;
 }
 body ::placeholder {
