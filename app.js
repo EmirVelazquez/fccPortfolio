@@ -6,6 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const navBar = document.getElementById("navbar");
     const projectImg = document.getElementsByClassName("projectImg");
     const projectSection = document.getElementById("projects");
+    // These are being used for freeCodeCamp's test suite
+    const fccButton = document.getElementById("fcc_test_suite_wrapper");
+    const fccButtonToggle = document.getElementById("fccTests");
+    var showing = false;
+    // These are being used for freeCodeCamp's test suite
     var imgOneHidden = false;
     var imgTwoHidden = false;
     var imgThreeHidden = false;
@@ -19,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     giveTileId();
     handleTileHover();
     revertTileNormal();
+    toggleTestSuite();
 
     // ==================================================
     // Helper Functions
@@ -119,6 +125,19 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     };
+
+    // This helper function handles the display for the fCC test suite
+    function toggleTestSuite() {
+        fccButtonToggle.addEventListener("click", function () {
+            if (showing) {
+                fccButton.style.display = "none";
+                showing = false;
+            } else {
+                fccButton.style.display = "block";
+                showing = true;
+            }
+        });
+    }
 
     // ==================================================
     // Zdog 3D Object

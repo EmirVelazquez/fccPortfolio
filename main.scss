@@ -240,6 +240,11 @@ body {
                         fill: whitesmoke !important;
                     }
                 }
+                #fccTests {
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
             }
             #copyrightContainer {
                 position: absolute;
@@ -252,6 +257,9 @@ body {
     }
     ::placeholder {
         color: rgba(0, 0, 0, 0.5) !important;
+    }
+    #fcc_test_suite_wrapper {
+        display: none;
     }
 }
 

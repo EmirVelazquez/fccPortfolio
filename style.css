@@ -234,6 +234,9 @@ body .main footer #socialIcons .socialWrapper:hover .socialSvg {
 body .main footer #socialIcons .socialWrapper .socialSvg {
   fill: whitesmoke !important;
 }
+body .main footer #socialIcons #fccTests:hover {
+  cursor: pointer;
+}
 body .main footer #copyrightContainer {
   position: absolute;
   left: 50%;
@@ -243,6 +246,9 @@ body .main footer #copyrightContainer {
 }
 body ::placeholder {
   color: rgba(0, 0, 0, 0.5) !important;
+}
+body #fcc_test_suite_wrapper {
+  display: none;
 }
 
 .updateNav {
