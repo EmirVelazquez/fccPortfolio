@@ -25,8 +25,8 @@ body {
     overflow-x: hidden;
     font-family: $ubuntuFont;
     #navbar {
-        background-color: transparent;
-        padding: 0.5rem 3rem;
+        background-color: $mainColor;
+        padding: 0.5rem 2rem 0.5rem 0;
         .navbar-brand {
             width: 4rem;
             height: 4rem;

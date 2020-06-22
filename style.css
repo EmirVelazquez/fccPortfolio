@@ -18,8 +18,8 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 body #navbar {
-  background-color: transparent;
-  padding: 0.5rem 3rem;
+  background-color: #33658a;
+  padding: 0.5rem 2rem 0.5rem 0;
 }
 body #navbar .navbar-brand {
   width: 4rem;
