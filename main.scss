@@ -297,3 +297,11 @@ body {
         }
     }
 }
+
+/* Media Queries Below */
+@media screen and (max-width: 768px) {
+    #welcomeText {
+        bottom: 3rem !important;
+        width: 100%;
+    }
+}

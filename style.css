@@ -280,4 +280,12 @@ body #fcc_test_suite_wrapper {
   background-color: #2f323a !important;
 }
 
+/* Media Queries Below */
+@media screen and (max-width: 768px) {
+  #welcomeText {
+    bottom: 3rem !important;
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
