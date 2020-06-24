@@ -126,6 +126,7 @@ body {
             height: 40vh;
             padding: 0 3rem;
             margin: 0 0 10rem 0;
+            background-color: $mainText;
             .projectCol {
                 display: flex;
                 justify-content: center;
@@ -303,5 +304,9 @@ body {
     #welcomeText {
         bottom: 3rem !important;
         width: 100%;
+    }
+    #aboutSection {
+        height: 60vh !important;
+        padding: 0 !important;
     }
 }

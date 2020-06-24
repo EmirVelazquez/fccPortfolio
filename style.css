@@ -118,6 +118,7 @@ body .main #projects {
   height: 40vh;
   padding: 0 3rem;
   margin: 0 0 10rem 0;
+  background-color: whitesmoke;
 }
 body .main #projects .projectCol {
   display: flex;
@@ -285,6 +286,11 @@ body #fcc_test_suite_wrapper {
   #welcomeText {
     bottom: 3rem !important;
     width: 100%;
+  }
+
+  #aboutSection {
+    height: 60vh !important;
+    padding: 0 !important;
   }
 }
 
