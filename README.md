@@ -10,4 +10,10 @@ Part of freeCodeCamp.org responsive web design certification curriculum. Objecti
 * Sass
 * Bootstrap
 
+## Link
 
+https://emirvelazquez.github.io/fccPortfolio/
+
+## Preview
+
+![](assets/fccPortPreview.gif)
