@@ -130,7 +130,6 @@ body {
             .projectCol {
                 display: flex;
                 justify-content: center;
-                padding: 2rem 0;
                 padding: 10px;
             }
             .project-tile {
@@ -308,5 +307,22 @@ body {
     #aboutSection {
         height: 60vh !important;
         padding: 0 !important;
+    }
+    .project-tile {
+        width: 150px !important;
+        height: 150px !important;
+        .projectTitles {
+            padding: 3rem 0 !important;
+            font-size: 0.9rem !important;
+        }
+        .projectLinks {
+            padding: 3rem 0 !important;
+            .projectButtons {
+                font-size: 0.7rem !important;
+                width: 100px !important;
+                height: 30px !important;
+                padding: 5px !important;
+            }
+        }
     }
 }
